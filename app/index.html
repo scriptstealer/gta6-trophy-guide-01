@@ -3,23 +3,89 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GTA VI trophy checklist</title>
+<title>GTA VI Trophy Guide &amp; Tracker — All 55 Trophies</title>
+<meta name="description" content="Offline guide and tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5: cited guides, platinum roadmap, missable flags, filters and a spoiler setting.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>GTA VI trophy checklist</h1>
-  <p id="progress">0 of 55 earned</p>
+<header class="hero">
+  <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5 &middot; Launch day guide</p>
+  <h1>GTA VI Trophy Guide &amp; Tracker</h1>
+  <p class="sub">All 55 trophies, each with its official name, description and grade, a guide in our own words, and the source it comes from. Tick trophies off as you earn them — progress saves in your browser and works fully offline.</p>
+  <div class="progress-wrap" aria-label="Trophy progress">
+    <div class="progress-bar"><div id="progress-fill" class="progress-fill" style="width:0%"></div></div>
+    <p id="progress-text" class="progress-text">0 of 55 earned &middot; 0%</p>
+  </div>
+  <p class="facts"><span><strong>55</strong> trophies</span><span><strong>1</strong> platinum</span><span><strong>2</strong> gold</span><span><strong>6</strong> silver</span><span><strong>46</strong> bronze</span><span><strong>~200 h</strong> to platinum</span><span><strong>1</strong> playthrough</span><span><strong>0</strong> online trophies</span></p>
 </header>
-<div class="controls">
-  <label>Grade <select id="grade"><option value="all">All</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select></label>
-  <button id="export" type="button">Export progress</button>
-  <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
-</div>
-<table>
-  <thead><tr><th>Earned</th><th>Trophy</th><th>Grade</th><th>How to get it</th></tr></thead>
-  <tbody id="rows"></tbody>
-</table>
+
+<section class="warning" id="missable-warning">
+  <h2>⚠ One trophy may be missable — read this first</h2>
+  <p><strong>Positive Mental Attitude</strong> (meditate at every spot across Leonida) is the only trophy PowerPyx flags as possibly missable. During <strong>Chapter 1</strong>, one morning at Jason&rsquo;s house, Lucia says she is going to meditate and walks out to the balcony. <strong>Follow her and accept the optional meditation.</strong> It is gone after Chapter 1, and GTA VI has <strong>no mission replay</strong>. Keep a manual save at the start of every chapter (15 manual slots plus 1 autosave). The 100% checklist only needs 15 of the 18 spots, so this trophy is the only reason to be careful. Cheats disable trophies and saving — keep them off your platinum run.</p>
+</section>
+
+<section class="roadmap" id="roadmap">
+  <h2>Roadmap to the platinum — Vice Got a Price!</h2>
+  <p class="roadmap-intro">PowerPyx rates the platinum 4/10 difficulty at about 200 hours (Push Square says 250+). One playthrough is enough. There are no difficulty trophies and no mission medals. Free roam continues after the story, and nothing on the 100% checklist is missable.</p>
+  <ol class="stages">
+    <li class="stage">
+      <h3>Stage 1 — Story first, Chapters 1–5 <span class="time">about 60–80 hours</span></h3>
+      <p>Play the five chapters at your own pace. Along the way: do the <strong>Chapter 1 balcony meditation</strong>; take optional missions as they appear (100% needs any 100 of several hundred); <strong>scan every new vehicle</strong> with the WAiNK app (100% needs 200 of 277); <strong>study new animals</strong> through the binoculars (100% needs 100 of 255); meet Cal in Chapter 1 for the fishing challenge; start the stranger strands as they open — Billy and Bret in Chapter 2, Andy, Randy and Tyrone in Chapter 3, Kenton whenever he returns. Turn on progress and criminal profile notifications in the UI settings so you can see what counts.</p>
+      <p class="stage-trophies">Covers: all 12 story trophies, the 5 stranger-strand finals, Baited My Tackle, Fair Game, Whip It Good, and the Chapter 1 meditation for Positive Mental Attitude.</p>
+    </li>
+    <li class="stage">
+      <h3>Stage 2 — The 100% checklist <span class="time">about 100 hours</span></h3>
+      <p>After the credits, the checklist opens under <strong>Progress &gt; Stats &gt; 100% Completion</strong>. Progress from the story already counts. PowerPyx calls it lenient — closer to 60% true completion. You need 70 of the 80 challenges, 300 stunts, 200 of 277 vehicles, 100 of 255 animals and 50 of 66 weapons. Only robberies, underwater discoveries, shooting ranges, drone races and Bret&rsquo;s quests need everything. Work through it and A Long Road follows.</p>
+      <p class="stage-trophies">Covers: A Long Road, Cunning Stunts, The Shootist, Top Fun, Earn Cash, Not Kudos, One Last Thing, Maximum Withdrawal, Pest Control, Dime on the Dollar, Treat Yo Self, Little Boxes, On the Spot, Don&rsquo;t Touch My Deck, You WAiNKer!, The Goodtime State.</p>
+    </li>
+    <li class="stage">
+      <h3>Stage 3 — Strangers &amp; Freaks and cleanup <span class="time">about 10 hours</span></h3>
+      <p>Most trophies should be done by now. Strangers &amp; Freaks is not part of 100%, so finish any of the 8 strands still open, then clean up the open-world one-offs: the partner trophies, the airport and tank stunts, the jewelry store, the strength grind, and the five trophies whose methods are still unconfirmed as of launch day. The platinum pops when the last one lands.</p>
+      <p class="stage-trophies">Covers: Strangers &amp; Freaks, Master of None, Stick Fiddler, Hot Together, Retail Therapy, Gunslinger, Catch Me If You Can, Challenging Tank, Sneakthief, A Classic Blitz Play, Let&rsquo;s Go Bowling, Personal Best, Actions Speak Louder, In The Beginning…, Capital Offense, Bad Luck, I Guess, The Truth Is Out There, Ten Pin, and the platinum itself.</p>
+    </li>
+  </ol>
+</section>
+
+<section class="controls" id="controls">
+  <div class="control-row">
+    <label class="search-label">Search <input id="search" type="search" placeholder="Trophy name, mission, or keyword…" autocomplete="off"></label>
+    <label class="grade-label">Grade
+      <select id="grade">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label class="spoiler-label"><input id="spoiler" type="checkbox" checked> Spoiler-safe: hide story trophy names until earned</label>
+  </div>
+  <div class="filter-row" role="group" aria-label="Filter by kind">
+    <button type="button" class="filter-btn active" data-kind="all">All <span class="count" id="count-all">55</span></button>
+    <button type="button" class="filter-btn" data-kind="story">Story <span class="count" id="count-story">12</span></button>
+    <button type="button" class="filter-btn" data-kind="missable">Missable <span class="count" id="count-missable">1</span></button>
+    <button type="button" class="filter-btn" data-kind="collectibles">Collectibles <span class="count" id="count-collectibles">4</span></button>
+    <button type="button" class="filter-btn" data-kind="activities">Activities <span class="count" id="count-activities">39</span></button>
+    <button type="button" class="filter-btn" data-kind="online">Online <span class="count" id="count-online">0</span></button>
+  </div>
+  <div class="control-row">
+    <button id="export" type="button">Export progress</button>
+    <label class="import-btn">Import progress <input id="import" type="file" accept="application/json"></label>
+    <button id="reset" type="button">Reset all ticks</button>
+    <p id="shown-count" class="shown-count" aria-live="polite"></p>
+  </div>
+</section>
+
+<main>
+  <div id="trophy-list" class="trophy-list"></div>
+  <p id="empty-state" class="empty-state" hidden>No trophies match this filter. There are no online trophies — every one of the 55 is earned in single-player.</p>
+</main>
+
+<footer>
+  <h2>Sources &amp; notes</h2>
+  <p>Guide text is original, written for this guide. Trophy names, descriptions and grades are as PlayStation publishes them, via the official list as carried by Exophase and PSNProfiles. Methods and counts come from <strong>PowerPyx — GTA 6 Trophy Guide &amp; Roadmap</strong> (200-hour estimate, 4/10 difficulty, the Chapter 1 meditation warning, stunt/vehicle/animal counts), <strong>GTABase</strong> (checklist grouping, criminal profile, the 500-action count), <strong>Push Square</strong> (250+ hour estimate, no known missables) and <strong>TrueTrophies</strong>. Five trophies (In The Beginning…, Capital Offense, Bad Luck, I Guess, The Truth Is Out There, Ten Pin) have no confirmed method as of launch day, 19 November 2026, and are marked unconfirmed in their guides rather than guessed at.</p>
+  <p>Data as of 19 November 2026. This guide works fully offline: it loads nothing over the network. No Rockstar Games logo, artwork, box art or game screenshots are used. Progress is saved only in your own browser (localStorage); export and import move it as a file.</p>
+</footer>
 <script type="module" src="app.js"></script>
 </body>
 </html>
