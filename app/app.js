@@ -50,10 +50,16 @@ function render() {
   let shown = 0;
   for (const t of trophies) {
     const isEarned = earned.has(t.name);
+    // Spoiler-safe mode hides a story trophy's name, description and guide until it is
+    // earned — so search must not match against those fields either, or a search for a
+    // mission name would leak the trophy it belongs to.
+    const spoilerHidden = state.spoiler && t.kind === 'story' && !isEarned;
     if (state.kind === 'missable' && !t.missable) continue;
     if (state.kind !== 'all' && state.kind !== 'missable' && t.kind !== state.kind) continue;
     if (state.grade !== 'all' && t.grade !== state.grade) continue;
-    const hay = (t.name + ' ' + t.description + ' ' + t.guide).toLowerCase();
+    const hay = spoilerHidden
+      ? ('hidden story trophy ' + t.kind + ' ' + t.grade)
+      : (t.name + ' ' + t.description + ' ' + t.guide).toLowerCase();
     if (q && !hay.includes(q)) continue;
     shown += 1;
 
@@ -80,7 +86,7 @@ function render() {
     head.className = 'card-head';
     head.append(gradeBadge(t.grade));
     const name = document.createElement('h3');
-    const hiddenBySpoiler = state.spoiler && t.kind === 'story' && !isEarned;
+    const hiddenBySpoiler = spoilerHidden;
     name.textContent = hiddenBySpoiler ? 'Hidden story trophy — earn it to reveal' : t.name;
     head.append(name);
     if (t.missable) head.append(tag('⚠ MISSABLE', 'tag-missable'));
